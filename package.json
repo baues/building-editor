@@ -1,0 +1,48 @@
+{
+  "name": "building-editor",
+  "version": "0.0.1",
+  "description": "Open Source Building Editor",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baues/building-editor.git"
+  },
+  "keywords": [
+    "building-editor",
+    "building",
+    "architecture",
+    "three.js",
+    "webgl"
+  ],
+  "author": "BAUES <info@baues.io> (https://github.com/baues)",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/baues/building-editor/issues"
+  },
+  "homepage": "https://github.com/baues/building-editor#readme",
+  "peerDependencies": {
+    "three": ">=0.127.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@types/node": "^14.14.41",
+    "@types/three": "^0.127.1",
+    "babel-loader": "^8.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "three": ">=0.127.0"
+  }
+}
