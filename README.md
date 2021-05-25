@@ -1,4 +1,4 @@
-# Building Editor
+# building-editor
 
 [![npm version](https://badge.fury.io/js/building-editor.svg)](https://badge.fury.io/js/building-editor)
 
