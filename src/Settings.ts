@@ -2,10 +2,10 @@
 import * as THREE from 'three';
 import { defaultSettings } from './defaultSettings';
 
-try {
-  // eslint-disable-next-line no-var
-  var { besettings } = require('besettings');
-} catch (e) {}
+// disable temporally
+// try {
+//   var { besettings } = require('besettings');
+// } catch (e) {}
 
 export interface BuildingEditorSettings {
   renderer: THREE.WebGLRenderer;
@@ -40,8 +40,8 @@ export class Settings {
     this.initialObjects = defaultSettings.initialObjects;
     this.initialHelpers = defaultSettings.initialHelpers;
 
-    if (besettings) {
-      Object.assign(this, besettings);
-    }
+    // if (besettings) {
+    //   Object.assign(this, besettings);
+    // }
   }
 }
