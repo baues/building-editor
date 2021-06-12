@@ -1,6 +1,6 @@
 {
   "name": "building-editor",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Open Source Building Editor",
   "main": "dist/index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/baues/building-editor#readme",
   "peerDependencies": {
-    "three": "^0.127.0"
+    "three": "^0.128.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -43,6 +43,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "three": "^0.127.0"
+    "three": "^0.128.0"
   }
 }
