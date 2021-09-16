@@ -54,6 +54,7 @@ export class ViewCubeControls {
   style: string;
   perspective: boolean;
   visible: boolean;
+  northDirection: number;
   update: () => void;
 
   constructor(config: Config, camera: THREE.Camera) {
@@ -61,6 +62,7 @@ export class ViewCubeControls {
     this.style = config.getKey('control/viewCubeControls/style') || defaultStyle;
     this.perspective = config.getKey('control/viewCubeControls/perspective') || false;
     this.visible = config.getKey('control/viewCubeControls/visible');
+    this.northDirection = config.getKey('control/viewCubeControls/northDirection') || 0;
 
     const size = this.size;
     const style = this.style;
@@ -121,10 +123,10 @@ export class ViewCubeControls {
     };
 
     const offsets = {
-      s: [0, -1],
-      w: [1, 0],
-      n: [0, 1],
-      e: [-1, 0],
+      n: [0, -1],
+      e: [1, 0],
+      s: [0, 1],
+      w: [-1, 0],
     };
 
     this.size = size;
@@ -159,7 +161,6 @@ export class ViewCubeControls {
     box.style.width = size + unit;
     box.style.height = size + unit;
     box.style.fontSize = size / 6 + unit;
-    box.style.display = this.visible ? 'block' : 'none';
 
     container.appendChild(box);
 
@@ -169,11 +170,26 @@ export class ViewCubeControls {
     const R = Math.PI * 0.8;
     const s = (size * R) / 2;
 
+    const dir = this.northDirection;
+    const rotatedOffsets = {
+      n: [offsets.n[0] * Math.cos(dir) - offsets.n[1] * Math.sin(dir), offsets.n[0] * Math.sin(dir) + offsets.n[1] * Math.cos(dir)],
+      e: [offsets.e[0] * Math.cos(dir) - offsets.e[1] * Math.sin(dir), offsets.e[0] * Math.sin(dir) + offsets.e[1] * Math.cos(dir)],
+      s: [offsets.s[0] * Math.cos(dir) - offsets.s[1] * Math.sin(dir), offsets.s[0] * Math.sin(dir) + offsets.s[1] * Math.cos(dir)],
+      w: [offsets.w[0] * Math.cos(dir) - offsets.w[1] * Math.sin(dir), offsets.w[0] * Math.sin(dir) + offsets.w[1] * Math.cos(dir)],
+    };
+
+    const loc = {
+      n: [rotatedOffsets.n[0] * s + s, rotatedOffsets.n[1] * s + s],
+      e: [rotatedOffsets.e[0] * s + s, rotatedOffsets.e[1] * s + s],
+      s: [rotatedOffsets.s[0] * s + s, rotatedOffsets.s[1] * s + s],
+      w: [rotatedOffsets.w[0] * s + s, rotatedOffsets.w[1] * s + s],
+    };
+
     const directions = {
-      s: 'translateX(' + s + unit + ') translateY(' + 0 + unit + ')',
-      w: 'translateX(' + s * 2 + unit + ') translateY(' + s + unit + ')',
-      n: 'translateX(' + s + unit + ') translateY(' + s * 2 + unit + ')',
-      e: 'translateX(' + 0 + unit + ') translateY(' + s + unit + ')',
+      n: 'translateX(' + loc.n[0] + unit + ') translateY(' + loc.n[1] + unit + ')',
+      e: 'translateX(' + loc.e[0] + unit + ') translateY(' + loc.e[1] + unit + ')',
+      s: 'translateX(' + loc.s[0] + unit + ') translateY(' + loc.s[1] + unit + ')',
+      w: 'translateX(' + loc.w[0] + unit + ') translateY(' + loc.w[1] + unit + ')',
     };
 
     function direction(name: 'N' | 'E' | 'S' | 'W'): void {
@@ -187,8 +203,8 @@ export class ViewCubeControls {
       e.textContent = name;
       e.style.transform = directions[id];
       e.style.fontSize = fs + unit;
-      e.style.left = -size / 2 / 6 - offsets[id][0] * fs + unit;
-      e.style.top = -size / 2 / 6 - offsets[id][1] * fs + unit;
+      e.style.left = -size / 2 / 6 - rotatedOffsets[id][0] * fs + unit;
+      e.style.top = -size / 2 / 6 - rotatedOffsets[id][1] * fs + unit;
 
       ring.appendChild(e);
     }
@@ -232,6 +248,7 @@ export class ViewCubeControls {
     plane('Top');
     plane('Bottom');
 
+    container.style.visibility = this.visible ? 'visible' : 'hidden';
     this.element = container;
 
     this.update = (): void => {
@@ -246,10 +263,14 @@ export class ViewCubeControls {
       const style = getObjectCSSMatrix(matrix);
 
       box.style.transform = style;
-      box.style.display = this.visible ? 'block' : 'none';
 
-      container.style.perspective = (this.perspective && camera instanceof THREE.PerspectiveCamera
-        ? Math.pow(size * size + size * size, 0.5) / Math.tan(((camera.fov / 2) * Math.PI) / 180) : 0) + unit;
+      container.style.visibility = this.visible ? 'visible' : 'hidden';
+      // container.style.perspective = (this.perspective && camera instanceof THREE.PerspectiveCamera
+      //   ? Math.pow(size * size + size * size, 0.5) / Math.tan(((camera.fov / 2) * Math.PI) / 180) : 0) + unit;
     };
+  }
+
+  remove(): void {
+    this.element.remove();
   }
 }

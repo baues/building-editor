@@ -52,4 +52,4 @@ This creates a new Editor.
 
 #### Properties and Methods
 
-Editor has many properties and methods. Please check [Editor class](https://github.com/baues/building-editor/blob/master/src/Editor.ts) to find them. The documents will be prepared later.
+Editor has many properties and methods. Please check [Editor class](https://github.com/baues/building-editor/blob/main/src/Editor.ts) to find them. The documents will be prepared later.

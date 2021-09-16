@@ -8,6 +8,7 @@ export interface BuildingEditorConfig {
   'control/viewCubeControls/size'?: number;
   'control/viewCubeControls/style'?: string;
   'control/viewCubeControls/perspective'?: boolean;
+  'control/viewCubeControls/northDirection'?: number; // relative north direction [rad]
   'debug': boolean;
   'history': boolean;
   'select/enabled': boolean;

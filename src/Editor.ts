@@ -128,6 +128,7 @@ export class Editor {
     this.orbitControls.enabled = !!this.config.getKey('control/orbitControls/enable');
     this.transformControls.enabled = !!this.config.getKey('control/transformControls/enable');
 
+    /*
     const viewCubeControlsSize = this.config.getKey('control/viewCubeControls/size');
     if (viewCubeControlsSize) {
       this.viewCubeControls.size = viewCubeControlsSize;
@@ -142,6 +143,14 @@ export class Editor {
     }
     const viewCubeControlsVisible = this.config.getKey('control/viewCubeControls/visible');
     this.viewCubeControls.visible = viewCubeControlsVisible;
+    const viewCubeControlsDirection = this.config.getKey('control/viewCubeControls/direction');
+    if (typeof viewCubeControlsDirection !== 'undefined') {
+      this.viewCubeControls.direction = viewCubeControlsDirection;
+    }
+    */
+
+    this.viewCubeControls.remove();
+    this.viewCubeControls = new ViewCubeControls(this.config, this.camera);
 
     if (!this.config.getKey('select/enabled')) {
       this.select(null);
