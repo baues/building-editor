@@ -1,5 +1,8 @@
 import { defaultConfig } from './defaultConfig';
 
+// eslint-disable-next-line max-len
+export type Key = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
+
 export interface BuildingEditorConfig {
   'exportPrecision': number;
   'control/orbitControls/enable': boolean;
@@ -14,6 +17,13 @@ export interface BuildingEditorConfig {
   'select/enabled': boolean;
   'redo/enabled': boolean;
   'undo/enabled': boolean;
+  'delete/enabled': boolean;
+  'contextmenu/enabled': boolean;
+  'shortcuts/translate': Key;
+  'shortcuts/rotate': Key;
+  'shortcuts/scale': Key;
+  'shortcuts/undo': Key;
+  'shortcuts/focus': Key;
 }
 
 export type EditorConfig = Partial<BuildingEditorConfig>;

@@ -2,11 +2,6 @@
 import * as THREE from 'three';
 import { defaultSettings } from './defaultSettings';
 
-try {
-  // eslint-disable-next-line no-var
-  var { besettings } = require('besettings');
-} catch (e) {}
-
 export interface BuildingEditorSettings {
   renderer: THREE.WebGLRenderer;
   camera: THREE.Camera;
@@ -30,7 +25,7 @@ export class Settings {
   initialObjects: THREE.Object3D[];
   initialHelpers: THREE.Object3D[];
 
-  constructor() {
+  constructor(settings?: EditorSettings) {
     this.renderer = defaultSettings.renderer;
     this.camera = defaultSettings.camera;
     this.scene = defaultSettings.scene;
@@ -40,8 +35,8 @@ export class Settings {
     this.initialObjects = defaultSettings.initialObjects;
     this.initialHelpers = defaultSettings.initialHelpers;
 
-    if (besettings) {
-      Object.assign(this, besettings);
+    if (settings) {
+      Object.assign(this, settings);
     }
   }
 }

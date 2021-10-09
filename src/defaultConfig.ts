@@ -10,4 +10,11 @@ export const defaultConfig: BuildingEditorConfig = {
   'select/enabled': true,
   'redo/enabled': true,
   'undo/enabled': true,
+  'delete/enabled': true,
+  'contextmenu/enabled': true,
+  'shortcuts/translate': 't',
+  'shortcuts/rotate': 'r',
+  'shortcuts/scale': 's',
+  'shortcuts/undo': 'z',
+  'shortcuts/focus': 'f',
 };

@@ -1,7 +1,7 @@
 {
   "name": "building-editor",
-  "version": "0.0.6",
-  "description": "Open Source Building Editor",
+  "version": "0.1.0",
+  "description": "Open Source 3D Building Model Editor",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

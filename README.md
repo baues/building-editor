@@ -4,7 +4,7 @@
 
 The goal of this project is to provide base implementation of web 3D editor for building/architecture which can be used easily. The codes are based on [three.js](https://github.com/mrdoob/three.js) editor fork, as we respect the great work of three.js.
 
-> Note: This project is under development. Please remember that there would be breaking changes. Or you can join us to make this package better for users.
+> Note: This project is under development. Please remember that there would be breaking changes. Or you can join us to make this project better for users.
 
 ## Installation
 
@@ -22,10 +22,6 @@ import { Editor } from 'building-editor';
 const editor = new Editor();
 document.body.appendChild(editor.renderer.domElement);
 
-const onChange = () => {
-  editor.render();
-};
-
 const init = () => {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -35,7 +31,6 @@ const init = () => {
 }
 
 init();
-editor.orbitControls.addEventListener('change', onChange);
 ```
 
 ## API

@@ -25,6 +25,7 @@ export class StencilPlane {
     });
 
     this.stencilPlane = new THREE.Mesh(planeGeom, planeMat);
+    this.stencilPlane.name = 'building-editor-stencilPlane';
     this.stencilPlane.renderOrder = 10;
     this.stencilPlane.onAfterRender = function (renderer: { clearStencil: () => void }): void {
       renderer.clearStencil();
