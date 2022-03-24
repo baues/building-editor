@@ -41,10 +41,30 @@ The main API of this library to create web 3D editor. This includes properties a
 
 #### Constructor
 
-##### Editor()
+##### Editor(config:[Config](#Config),settings:[Settings](#Settings)). 
 
-This creates a new Editor.
+This creates a new Editor.  
 
-#### Properties and Methods
+config - configuration data to specify cotrolability of editor (e.g. undo/redo, delete etc).  
+settings - setting data which summarize view setting such as renderer, camera, scene etc.  
+
+#### Properties and Methods.  
+
+##### .config:[Config](#Config). 
+configuration data to specify cotrolability of editor (e.g. undo/redo, delete etc).  
+
+##### .settings:[Settings](#Settings).  
+setting data which summarize view setting such as renderer, camera, scene etc.  
+
+##### .editorControls:[EditorControls](#EditorControls).  
+TBD. 
+
+##### .renderer:[THREE.WebGLRenderer](https://threejs.org/docs/index.html?q=webGL#api/en/renderers/WebGLRenderer).  
+
+
+
+##### Config(config?:[BuildingEditorConfig](#BuildingEditorConfig)). 
+
+##### BuildingEditorConfig. 
 
 Editor has many properties and methods. Please check [Editor class](https://github.com/baues/building-editor/blob/main/src/Editor.ts) to find them. The documents will be prepared later.
