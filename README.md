@@ -61,9 +61,33 @@ TBD.
 
 ##### .renderer:[THREE.WebGLRenderer](https://threejs.org/docs/index.html?q=webGL#api/en/renderers/WebGLRenderer).  
 
+##### .DEFAULT_CAMERA:[THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).  
 
+##### .history:[History](#History). 
 
-##### Config(config?:[BuildingEditorConfig](#BuildingEditorConfig)). 
+##### .exporter:[Exporter](#Exporter).  
+
+##### .loader:[Loader](#Loader).  
+
+##### .camera:[THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).  
+
+##### .scene:[THREE.Scene](https://threejs.org/docs/?q=scene#api/en/scenes/Scene).  
+
+##### .sceneHelpers:[THREE.Scene](https://threejs.org/docs/?q=scene#api/en/scenes/Scene).  
+
+##### .objects:[THREE.Object3D[]](https://threejs.org/docs/?q=object3#api/en/core/Object3D).  
+
+##### .INITIAL_OBJECTS:[THREE.Object3D[]](https://threejs.org/docs/?q=object3#api/en/core/Object3D).  
+
+##### .INITIAL_HELPERS:[THREE.Object3D[]](https://threejs.org/docs/?q=object3#api/en/core/Object3D).  
+
+##### .geometries:{[index:string]:[THREE.BufferGeometry](https://threejs.org/docs/?q=geometr#api/en/core/BufferGeometry)}   
+
+##### .materials:{[index:string]:[THREE.Material](https://threejs.org/docs/?q=material#api/en/constants/Materials)}   
+
+##### .textures:{[index:string]:[THREE.Texture](https://threejs.org/docs/?q=material#api/en/constants/Textures)}   
+
+##### Config(config?:[BuildingEditorConfig](#BuildingEditorConfig)).  
 
 ##### BuildingEditorConfig. 
 
