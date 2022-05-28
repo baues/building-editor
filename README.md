@@ -48,7 +48,7 @@ This creates a new Editor.
 config - configuration data to specify cotrolability of editor (e.g. undo/redo, delete etc).  
 settings - setting data which summarize view setting such as renderer, camera, scene etc.  
 
-#### Properties and Methods.  
+#### Properties  
 
 ##### .config:[Config](#Config). 
 configuration data to specify cotrolability of editor (e.g. undo/redo, delete etc).  
@@ -139,7 +139,40 @@ summarize following three helpers
 
 ##### contextMenu:  
 
-##### event:[Event](https://github.com/baues/building-editor/blob/main/src/Event.ts)  
+##### event:[Event](https://github.com/baues/building-editor/blob/main/src/Event.ts)    
+
+#### Methods.   
+##### setConfig(config):void  
+
+##### objectChanged(object):void  
+
+##### showGridChanged(showGrid:boolean):void  
+
+##### render():void  
+
+##### setScene(scene):void  
+
+##### changeTransformModel(mode):void  
+
+##### addObject(object,parent,index):void  
+
+##### addObjectAsHelper(object):void  
+
+##### moveObject(object,parent,before):void  
+
+##### nameObject(object,name):void  
+
+##### removeObject(object):void  
+
+##### addGeometry(geometry):void  
+
+##### setGeometryName(geometry,name):void  
+
+##### addMaterial(material):void  
+
+##### addMaterialToRefCounter(material):void  
+
+
 
 ##### Config(config?:[BuildingEditorConfig](#BuildingEditorConfig)).  
 
