@@ -172,6 +172,63 @@ summarize following three helpers
 
 ##### addMaterialToRefCounter(material):void  
 
+##### removeMaterial(material):void  
+
+##### removeMaterialFromRefCounter(material):void  
+
+##### getMaterialById(id):THREE.Material | undefined  
+
+##### setMaterialName(material,name):void  
+
+##### addTexture(texture):void  
+
+##### addAnimation(object,animations):void  
+
+##### addCamera(camera):void  
+
+##### removeCamera(camera):void  
+
+##### addHelper(object):void  
+
+##### removeHelper(object):void  
+
+##### updateGridHelper(gridHelper):void  
+
+##### updateAxesHelper(axesHelper):void  
+
+##### updatePlaneHelper(planeHelper):void  
+
+##### clip(enabled):void  
+
+##### setDefaultCamera():void  
+
+##### setViewportCamera(uuid):void  
+
+##### select(object|null):void  
+
+##### selectNyId(id):void  
+
+##### selectByUuid(uuid):void  
+
+##### setHovered(object|null):void  
+
+##### focus(object):void  
+
+##### focusById(id):void  
+
+##### clear():void  
+
+##### fromJSON(json):void  
+
+##### toJSON():EditorJson  
+
+##### objectByUuid(uuid):THREE.Object3d|undefined  
+
+##### execute(cmd):void  
+
+##### undo():void  
+
+##### redo():void  
 
 
 ##### Config(config?:[BuildingEditorConfig](#BuildingEditorConfig)).  
