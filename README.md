@@ -67,8 +67,10 @@ extension of [THREE.EventDispatcher](https://threejs.org/docs/#api/en/core/Event
 Manage undo/redo history  
 
 ##### .exporter:[Exporter](#Exporter).  
+Utility class to export geometry in different format (e.g. obj, stl, dae etc)  
 
 ##### .loader:[Loader](#Loader).  
+Utility class to load geometry file into editor  
 
 ##### .camera:[THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).  
 
@@ -87,6 +89,8 @@ Manage undo/redo history
 ##### .materials:{[index:string]:[THREE.Material](https://threejs.org/docs/?q=material#api/en/constants/Materials)}   
 
 ##### .textures:{[index:string]:[THREE.Texture](https://threejs.org/docs/?q=material#api/en/constants/Textures)}   
+
+##### .materialsRefCounter
 
 ##### Config(config?:[BuildingEditorConfig](#BuildingEditorConfig)).  
 
