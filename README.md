@@ -57,13 +57,14 @@ configuration data to specify cotrolability of editor (e.g. undo/redo, delete et
 setting data which summarize view setting such as renderer, camera, scene etc.  
 
 ##### .editorControls:[EditorControls](#EditorControls).  
-TBD. 
+extension of [THREE.EventDispatcher](https://threejs.org/docs/#api/en/core/EventDispatcher)    
 
 ##### .renderer:[THREE.WebGLRenderer](https://threejs.org/docs/index.html?q=webGL#api/en/renderers/WebGLRenderer).  
 
 ##### .DEFAULT_CAMERA:[THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).  
 
-##### .history:[History](#History). 
+##### .history:[History](#History).  
+Manage undo/redo history  
 
 ##### .exporter:[Exporter](#Exporter).  
 
