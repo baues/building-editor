@@ -90,7 +90,56 @@ Utility class to load geometry file into editor
 
 ##### .textures:{[index:string]:[THREE.Texture](https://threejs.org/docs/?q=material#api/en/constants/Textures)}   
 
-##### .materialsRefCounter
+##### .materialsRefCounter: Map<[THREE.Material](https://threejs.org/docs/?q=material#api/en/constants/Materials),number>  
+
+##### aminations: {[index:string]:[THREE.AnimationClip](https://threejs.org/docs/#api/en/animation/AnimationClip)[]}   
+
+##### mixer: [THREE.AnimationMixer](https://threejs.org/docs/#api/en/animation/AnimationMixer)  
+
+##### selected: [THREE.Object3D](https://threejs.org/docs/?q=object3#api/en/core/Object3D) | null  
+selected object in editor  
+
+##### hovered: [THREE.Object3D](https://threejs.org/docs/?q=object3#api/en/core/Object3D) | null   
+hovered object in editor  
+
+##### helpers: {[index:string]: Helper}  
+summarize following three helpers  
+- THREE.CameraHelper  
+- THREE.PointLightHelper  
+- THREE.DirectionalLightHelper  
+- THREE.SpotLightHelper  
+- THREE.HemisphereLightHelper  
+- THREE.SkeltonHelper  
+
+##### cameras: {[index:string]: [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera)}  
+
+##### viewportCameras:[THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera)  
+
+##### orbitControls: [THREE.OrbitControls](https://threejs.org/docs/#examples/en/controls/OrbitControls)  
+
+##### viewCubeControls:   
+
+##### gridHelper: [THREE.GridHelper](https://threejs.org/docs/#api/en/helpers/GridHelper)  
+
+##### axesHelper: [THREE.AxesHelper](https://threejs.org/docs/#api/en/helpers/AxesHelper)  
+
+##### planeHelper: [THREE.PlaneHelper](https://threejs.org/docs/#api/en/helpers/PlaneHelper)  
+
+##### stencilPlane:   
+
+##### box:[THREE.box3](https://threejs.org/docs/?q=box3#api/en/math/Box3)  
+
+##### selectionBox:[THREE.BoxHelper](https://threejs.org/docs/?q=box3#api/en/helpers/Box3Helper)  
+
+##### transformControls:[TransformControls](https://threejs.org/docs/#examples/en/controls/TransformControls)  
+
+##### raycaster:[THREE.Raycaster](https://threejs.org/docs/#api/en/core/Raycaster)  
+
+##### mouse:[THREE.Vector2](https://threejs.org/docs/#api/en/math/Vector2)  
+
+##### contextMenu:  
+
+##### event:[Event](https://github.com/baues/building-editor/blob/main/src/Event.ts)  
 
 ##### Config(config?:[BuildingEditorConfig](#BuildingEditorConfig)).  
 
