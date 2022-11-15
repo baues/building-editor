@@ -1,7 +1,5 @@
 # building-editor
 
-# テスト
-
 [![npm version](https://badge.fury.io/js/building-editor.svg)](https://badge.fury.io/js/building-editor)
 
 The goal of this project is to provide base implementation of web 3D editor for building/architecture which can be used easily. The codes are based on [three.js](https://github.com/mrdoob/three.js) editor fork, as we respect the great work of three.js.
